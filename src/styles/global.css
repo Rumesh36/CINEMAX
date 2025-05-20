@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+
+@theme {
+    --color-jetGray : #222831;
+    --color-charcoalGray :#393E46;
+    --color-dustyMocha : #948979;
+    --color-champagne :#DFD0B8;
+}
+
+@layer base {
+    .btn {
+       color: black;
+       background-color: green;
+       border-radius: 26px;
+       width: 200px;
+    }
+
+}

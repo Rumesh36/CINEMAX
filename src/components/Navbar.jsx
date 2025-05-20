@@ -1,17 +1,11 @@
-function Navbar(){
-    return(
-<>
+import React from 'react'
 
-       <nav className="mr-2">
-            <ul className="flex gap-5 text-xl ">
-                <li className="tracking-[1rem] ml-2 mr-auto font-bold"> CineMax</li>
-                <li>Home</li>
-                <li>Recent</li>
-                <li>Directors</li>
-                <li>About</li>
-            </ul>
-       </nav>
+const Navbar = () => {
+  return (
+    <>
+    <h1>Hello woerlds</h1>
+    </>
+  )
+}
 
-</>
- )}
- export default Navbar;
+export default Navbar
