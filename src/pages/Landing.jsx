@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 const Landing = () => {
   return (
     <>
-    <div className="bg-neutral-400">
+    <div className="bg-linear-to-b from-white to-red-500">
         <h1 className="text-center text-3xl pt-4 font-bold text-gray-800 tracking-[0.8rem]">
              CineMax
              </h1>
@@ -31,7 +31,7 @@ const Landing = () => {
                  Click here</button>
              </Link>
              <div className=''>
-                <h1 className='pl-6 text-2xl text-center mb-4 mt-4 text-red-600 font-semibold'>
+                <h1 className='pl-6 text-2xl text-center mb-4 mt-4 text-red-800 font-medium'>
                     More Reasons to Explore
                     </h1>
              </div>

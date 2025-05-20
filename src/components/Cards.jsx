@@ -14,14 +14,14 @@ const Cards = () => {
 
     <Card 
     heading = {" Movies"}
-    content = {"Discover the latest movies,shows and more...."}
+    content = {"Find your favourite movies ,TV shows Here.."}
     icon = {<FaTv size={28} color='black'/>}
     />
 
 
     <Card 
-    heading = {"PopReel"}
-    content = {"Music,Tv ,Trending and many more highlights...."}
+    heading = {"Easy Search"}
+    content = {"Fast and Accurate search-search your fav here.. "}
     icon = {<FaMusic size={28} color='black'/>}
     />
 
