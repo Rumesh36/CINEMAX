@@ -7,9 +7,9 @@ import Footer from '../components/Footer'
 const Landing = () => {
   return (
     <>
-    <div className="bg-jetGray">
-        <h1 className="text-center text-3xl pt-4 font-bold text-white">
-             cineMax
+    <div className="bg-neutral-400">
+        <h1 className="text-center text-3xl pt-4 font-bold text-gray-800 tracking-[0.8rem]">
+             CineMax
              </h1>
              <div className="mx-auto w-1/2 rounded-3xl">
                 <img src={fightclub} 
@@ -19,19 +19,19 @@ const Landing = () => {
              </div>
              <div className="text-4xl text-center font-bold">
                 <h1 className=" text-charcoalGray">
-                     Unlimited movies and shows
+                     Unlimited movies ,TV shows and More...
                      </h1>
-                     <h1 className='text-charcoalGray text-3xl'>
-                        Get Info
+                     <h1 className='text-charcoalGray text-lg'>
+                        Ready to watch? Enter your email to create or restart your membership.
                      </h1>
              </div>
 
              <Link to={ "home"}>
-              <button className='bg-red-600 mx-auto block mt-4 text-white px-3 py-2 rounded'>
+              <button className='bg-red-600 mx-auto block mt-4 text-white px-3 py-2 rounded-md cursor-pointer hover:bg-red-700'>
                  Click here</button>
              </Link>
-             <div className='flex'>
-                <h1 className='pl-6 text-2xl'>
+             <div className=''>
+                <h1 className='pl-6 text-2xl text-center mb-4 mt-4 text-red-600 font-semibold'>
                     More Reasons to Explore
                     </h1>
              </div>
