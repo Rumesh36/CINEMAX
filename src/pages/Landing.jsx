@@ -11,10 +11,10 @@ const Landing = () => {
         <h1 className="text-center text-3xl pt-4 font-bold text-gray-800 tracking-[0.8rem]">
              CineMax
              </h1>
-             <div className="mx-auto w-1/2 rounded-3xl">
+             <div className="  mx-auto w-[90%] sm:w-[75%] lg:w-[30%]  h-auto rounded-3xl">
                 <img src={fightclub} 
                 alt=""
-                className='rounded-3xl my-4'
+                className='rounded-3xl my-4 '
                  />
              </div>
              <div className="text-4xl text-center font-bold">
