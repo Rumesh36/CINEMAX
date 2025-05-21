@@ -17,7 +17,7 @@ const Home = () => {
     const fetchData=async () => {
      setLoading(true)
      try{
-      const res = await fetch(`http://www.omdbapi.com/?apikey=${OMDB_API_KEY}&t=${searchQuery}&plot=full`);
+      const res = await fetch(`https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&t=${searchQuery}&plot=full`);
       const data = await res.json()
       setMovieData(data)
      }
