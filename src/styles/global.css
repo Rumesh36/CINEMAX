@@ -10,10 +10,15 @@
 
 @layer base {
     .btn {
-       color: black;
-       background-color: green;
-       border-radius: 26px;
-       width: 200px;
+       width: 100px;
+       height: 35px;
+       border-radius: 10px;
+       background-color: rgb(74, 92, 234);
+       color: white;
+       font-weight: bold;
+    }
+    .btn:hover{
+        background-color: rgb(33, 33, 222);
     }
 
 }
