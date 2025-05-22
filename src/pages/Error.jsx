@@ -9,8 +9,8 @@ const Error = () => {
          
          <div className=" my-5">
 
-            <h1 className="text-center lg:text-5xl text-3xl mt-18 font-bold ">404 Error Page Not Found </h1> 
-             <h3 className="text-center mt-3 text-xl font-bold text-gray-800">The Page Your Looking For Is not Found or donot exist... please <span className="text-red-500">TRY AGAIN</span></h3>
+            <h1 className="text-center lg:text-5xl text-2xl mt-18 font-bold ">404 Error Page Not Found </h1> 
+             <h3 className="text-center mt-3 text-lg font-bold text-gray-800">The Page Your Looking For Is not Found or donot exist... please <span className="text-red-500">TRY AGAIN</span></h3>
         </div>
 
            <div className="">
