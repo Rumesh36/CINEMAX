@@ -14,7 +14,7 @@ const Error = () => {
         </div>
 
            <div className="">
-             <p className="text-center mt-15 text-lg font-bold text-gray-800">Make Sure Your Internet connection is stable</p>
+             <p className="text-center mt-7 text-lg font-bold text-gray-700">Make Sure Your Internet connection is stable</p>
              <img src={Img} alt="Error"
              className=' mt-3 rounded-3xl mx-auto lg:mb-5'  />
            </div>
