@@ -4,12 +4,15 @@ import Landing from "./pages/Landing"
 import Home from "./pages/Home"
 import Error from "./pages/Error"
 
+
 function App() {
   
 
   return (
     <>
+      
       <BrowserRouter>
+      <Navbar/>
       <Routes>
       <Route path="/" element = {<Landing/>}/>
       <Route path="/home" element = {<Home/>}/>
@@ -17,6 +20,8 @@ function App() {
       </Routes>
       
       </BrowserRouter>
+
+     
     </>
   )
 }

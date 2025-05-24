@@ -8,9 +8,7 @@ const Landing = () => {
   return (
     <>
     <div className="bg-linear-to-b from-white to-red-500">
-        <h1 className="text-center text-3xl pt-4 font-bold text-gray-800 tracking-[0.8rem]">
-             CineMax
-             </h1>
+       
              <div className="  mx-auto w-[90%] sm:w-[75%] lg:w-[30%]  h-auto rounded-3xl">
                 <img src={fightclub} 
                 alt=""
