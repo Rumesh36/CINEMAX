@@ -22,6 +22,7 @@ const Error = () => {
            <Link to="/">
             <h1 className='text-xl text-red-600 mt-3 text-center font-extrabold mb-5'>Click Here to Go Home Page...</h1>
            </Link>
+          
     
     </>
 

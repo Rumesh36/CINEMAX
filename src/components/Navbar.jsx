@@ -25,10 +25,12 @@ const Navbar = () => {
        >
         {isOpen?<IoClose color='white' size={35}/> :<GiHamburgerMenu/>} 
       </button>
+    
+     <DarkMode/>
    </div>
 
         <nav className={` fixed top-0  rounded-sm h-75 w-64 bg-gray-500 px-4 py-4 transition-all duration-300
-         sm:h-auto sm:w-full sm:right-0 sm:mt-0 sm:rounded-none ${isOpen ? 'right-0 ': '-right-full'}  `}>
+         sm:h-auto sm:w-full sm:right-0 sm:mt-0 sm:rounded-none ${isOpen ? 'right-0 ': '-right-full'} dark:bg-gray-900  `}>
 
           <ul className={`flex  flex-col items-center text-white font-semibold space-x-6 px-4
                      sm:flex-row `}>

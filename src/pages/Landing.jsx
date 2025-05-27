@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 const Landing = () => {
   return (
     <>
-    <div className="bg-linear-to-b from-white to-red-500">
+    <div className="bg-linear-to-b from-white to-gray-500 dark:bg-gray-900" >
        
              <div className="  mx-auto w-[90%] sm:w-[75%] lg:w-[30%]  h-auto rounded-3xl">
                 <img src={fightclub} 
