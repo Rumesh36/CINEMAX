@@ -2,12 +2,12 @@ import React from 'react'
 import fightclub from '../assets/fightclub.webp'
 import { Link } from 'react-router-dom'
 import Cards from '../components/Cards'
-import Footer from '../components/Footer'
+import Footer from '../components/Layouts/Footer'
 
 const Landing = () => {
   return (
     <>
-    <div className="bg-linear-to-b from-white to-gray-500 dark:bg-gray-900" >
+    <div className="bg-linear-to-b from-white to-gray-500 dark:bg-gray-900 min-h-screen" >
        
              <div className="  mx-auto w-[90%] sm:w-[75%] lg:w-[30%]  h-auto rounded-3xl">
                 <img src={fightclub} 

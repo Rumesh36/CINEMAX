@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
-import DarkMode from "./DarkMode";
+import DarkMode from "../DarkMode";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
