@@ -1,7 +1,7 @@
 import AppLayout from "./components/Layouts/AppLayout";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import Landing from "./pages/Landing";
 import Home from "./pages/Home";
+import MovieSearch from "./pages/MovieSearch";
 import Error from "./pages/Error";
 
 function App() {
@@ -13,8 +13,8 @@ function App() {
             path="/"
             element={<AppLayout />}
             children={[
-              <Route path="/" element={<Landing />} />,
-              <Route path="/home" element={<Home />} />,
+              <Route path="/" element={< Home/>} />,
+              <Route path="/MovieSearch" element={<MovieSearch/>} />,
               <Route path="*" element={<Error />}></Route>,
             ]}
           />

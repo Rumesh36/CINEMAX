@@ -13,27 +13,24 @@ const Navbar = () => {
 
   return (
     <>
-      <header>
-        <div className="mb-25">
+      <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+        <div className="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
           <Link to="/">
-            <h1 className="sm:hidden text-2xl absolute  top-5 left-4 font-semibold text-gray-700">
+            <h1 className="text-2xl font-bold text-gray-800">
               CiNEMAX
             </h1>
           </Link>
           <button
             onClick={Open}
-            className="sm:hidden text-3xl absolute text-black top-4 right-5 z-50"
+            className="text-3xl text-black sm:hidden z-50"
           >
-            {isOpen ? <IoClose color="white" size={35} /> : <GiHamburgerMenu />}
+            {isOpen ? <IoClose color="black" size={32} /> : <GiHamburgerMenu  size={28}/>}
           </button>
         </div>
 
-        <nav
-          className={` fixed top-0  rounded-sm min-h-screen w-75 bg-gray-500    transition-all duration-300 flex justify-between
-         sm:absolute sm:min-h-15 sm:w-full sm:right-0 sm:mt-0 sm:rounded-none ${
-           isOpen ? "right-0 " : "-right-full"
-         } dark:bg-gray-900  `}
-        >
+       <nav className={`  max-sm:min-h-screen sm:flex sm:items-center sm:justify-between sm:px-6 sm:py-2 sm:h-5 transition-all duration-300 bg-gray-400 sm:bg-transparent 
+         ${isOpen ? "block" : "hidden sm:block"}`}>
+
           <div className="hidden sm:flex items-center ml-5 ">
             <h1 className="text-2xl  text-white font-semibold  ">
               <Link
@@ -45,19 +42,8 @@ const Navbar = () => {
               </Link>
             </h1>
           </div>
-          <ul
-            className={`flex  flex-col items-center text-white font-semibold space-x-6 py-15 mx-auto text-2xl sm:text-xl sm:py-3
-                     sm:flex-row `}
-          >
-            <li>
-              <Link
-                to="/home"
-                onClick={Open}
-                className="hover:bg-gray-800 py-2 px-2 rounded-xl cursor-pointer block"
-              >
-                Home
-              </Link>
-            </li>
+
+       <ul className="flex flex-col  sm:flex-row items-center text-white sm:text-black dark:sm:text-white font-semibold text-xl gap-y-6 sm:gap-x-6 px-6 py-4 sm:py-0">
 
             <li>
               <Link
@@ -65,9 +51,30 @@ const Navbar = () => {
                 onClick={Open}
                 className="hover:bg-gray-800 py-2 px-2 rounded-xl cursor-pointer block"
               >
+                Home
+              </Link>
+            </li>
+
+              
+           <li>
+            <Link to="/MovieSearch"
+            onClick={Open}
+            className="hover:bg-gray-800 py-2 px-2 rounded-xl cursor-pointer block">
+              Search
+            </Link>
+           </li>
+
+            <li>
+              <Link
+                to="/MovieSearch"
+                onClick={Open}
+                className="hover:bg-gray-800 py-2 px-2 rounded-xl cursor-pointer block"
+              >
                 Music
               </Link>
             </li>
+            
+          
 
             <li>
               <Link
