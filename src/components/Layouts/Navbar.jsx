@@ -1,94 +1,80 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { IoClose } from "react-icons/io5";
-import DarkMode from "../DarkMode";
+import React from 'react'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  
+  const toggleMenu = () =>{
+    setOpen(!open);
+  }
 
-  const Open = () => {
-    setIsOpen(!isOpen);
-  };
+  const navLinks = [
+    {label:"Home" ,path:"/"},
+    {label:"Search" ,path:"/search"},
+    {label:"Music" ,path:"/music"}, 
+  ];
 
+  
   return (
-    <>
-      <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
-        <div className="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
-          <Link to="/">
-            <h1 className="text-2xl font-bold text-gray-800">
-              CiNEMAX
-            </h1>
-          </Link>
-          <button
-            onClick={Open}
-            className="text-3xl text-black sm:hidden z-50"
-          >
-            {isOpen ? <IoClose color="black" size={32} /> : <GiHamburgerMenu  size={28}/>}
-          </button>
+  
+   <>
+   <nav className='bg-gray-200 fixed top-0 left-0 w-full z-50 shadow-md'>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex justify-between items-center h-16">
+        <div className="text-3xl text-gray-800 font-bold  ">
+          Cine<span className='text-red-600'>Max</span>
         </div>
-
-       <nav className={`  max-sm:min-h-screen sm:flex sm:items-center sm:justify-between sm:px-6 sm:py-2 sm:h-5 transition-all duration-300 bg-gray-400 sm:bg-transparent 
-         ${isOpen ? "block" : "hidden sm:block"}`}>
-
-          <div className="hidden sm:flex items-center ml-5 ">
-            <h1 className="text-2xl  text-white font-semibold  ">
-              <Link
-                to="/"
-                onClick={Open}
-                className="cursor-pointer sm:text-center"
-              >
-                CINEMAX
-              </Link>
-            </h1>
-          </div>
-
-       <ul className="flex flex-col  sm:flex-row items-center text-white sm:text-black dark:sm:text-white font-semibold text-xl gap-y-6 sm:gap-x-6 px-6 py-4 sm:py-0">
-
-            <li>
-              <Link
-                to="/"
-                onClick={Open}
-                className="hover:bg-gray-800 py-2 px-2 rounded-xl cursor-pointer block"
-              >
-                Home
-              </Link>
-            </li>
-
-              
-           <li>
-            <Link to="/MovieSearch"
-            onClick={Open}
-            className="hover:bg-gray-800 py-2 px-2 rounded-xl cursor-pointer block">
-              Search
+           {/* desktop menu */}
+           <div className="hidden md:flex space-x-6 text-gray-800 text-xl font-semibold">
+            {navLinks.map((link)=>(
+            <Link
+            key={link.path}
+            to={link.path}
+            className='hover:text-red-700'
+            >
+              {link.label}
             </Link>
-           </li>
+            ))}
+           </div>
 
-            <li>
-              <Link
-                to="/MovieSearch"
-                onClick={Open}
-                className="hover:bg-gray-800 py-2 px-2 rounded-xl cursor-pointer block"
-              >
-                Music
-              </Link>
-            </li>
-            
-          
+           {/* mobile menu toggle */}
+           <div className="md:hidden ">
+            <button onClick={toggleMenu}
+            className='text-gray-800'>
+            {open ? (
+              <FaTimes size={25} color="red"/>
+            ):(<FaBars size={25} color='red'/>)}
 
-            <li>
-              <Link
-                to="/"
-                className="hover:bg-gray-800 py-2 px-2 rounded-xl cursor-pointer block mr-3"
-              >
-                About
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </>
-  );
-};
+            </button>
+           </div>
+      </div>
+    </div>
+      {/* mobile menu  */}
+           {open && (
+            <div className="md:hidden px-4 pb-4 space-y-4 text-gray-800 font-bold text-xl ">
+              {navLinks.map((link)=>(
+               <Link
+               key={link.path}
+               to={link.path}
+               onClick={()=>setOpen(false)}
+               className='block hover:text-gray-800'
+               >
+                {link.label}
+               </Link>
+              ))}
+            </div>
+           )}
+   </nav>
+   
+   
+   </>
 
-export default Navbar;
+
+
+
+  )
+}
+
+export default Navbar
