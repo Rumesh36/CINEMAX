@@ -38,12 +38,7 @@ const Cards = () => {
     />
 </Link>
 
-    <Card 
-    heading = {"ALL IN ONE"}
-    content = {"TV shows. Music. News, reviews ,shows -all in 1"}
-    icon = {<PiFilmReelFill size={28} color='red'/>}
-    />
-
+   
 
 </div>
 

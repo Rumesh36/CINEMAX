@@ -1,7 +1,7 @@
 import React from 'react'
-
+import fightclub from '../assets/Img/fightclub.webp'
 // import club1 from '../assets/Img/club1.webp'
-import club2 from '../assets/Img/club2.webp'
+// import club2 from '../assets/Img/club2.webp'
 import { Link } from 'react-router-dom'
 import Cards from '../components/Cards'
 import Footer from '../components/Layouts/Footer'
@@ -14,7 +14,7 @@ const Home = () => {
              <p className='text-center text-charcoalGray text-xs'>Where the soul meets emotion — that’s the magic of cinema.</p>
 
              <div className="  mx-auto w-[90%] sm:w-[75%] lg:w-[30%]  h-auto rounded-3xl">
-                <img src={club2} 
+                <img src={fightclub} 
                 alt=""
                 className='rounded-3xl my-4 '
                  />
