@@ -17,7 +17,7 @@ const Cards = () => {
  <Link to="/movies">
     <Card 
     heading = {" Movies"}
-    content = {"Know more About Your Favourite Movie,Director...."}
+    content = {"Know more About Your Favourite Movie,Director,cast more...."}
     icon = {<BiSolidCameraMovie size={28} color='black'/>}
     />
 </Link>

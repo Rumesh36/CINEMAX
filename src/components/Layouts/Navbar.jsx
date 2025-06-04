@@ -14,6 +14,7 @@ const Navbar = () => {
     {label:"Home" ,path:"/"},
     {label:"Search" ,path:"/search"},
     {label:"Music" ,path:"/music"}, 
+    {label:"Movies" ,path:"/movies"}, 
   ];
 
   
@@ -59,7 +60,7 @@ const Navbar = () => {
                key={link.path}
                to={link.path}
                onClick={()=>setOpen(false)}
-               className='block hover:text-gray-800'
+               className='block  hover:text-red-700'
                >
                 {link.label}
                </Link>

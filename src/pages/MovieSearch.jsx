@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 
 
+
 const MovieSearch = () => {
 
   const [movieName,setMovieName] =useState('');
@@ -47,8 +48,8 @@ const handleSearch = () => {
 
   <h1 className="text-center text-3xl my-3 font-bold text-gray-700">CineMax Search</h1>
 
-
-   <div className="text-center mt-5">
+      
+   <div className="text-center mt-5 ">
       <label className='text-lg font-semibold text-red-600'>Search by Movie Name</label>
       <br />
       <input
