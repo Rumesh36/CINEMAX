@@ -46,7 +46,7 @@ const handleSearch = () => {
   return (
   <>
 
-  <h1 className="text-center text-3xl my-3 font-bold text-gray-700">CineMax Search</h1>
+  <h1 className="text-center text-3xl my-3 font-bold text-gray-700 pt-20">CineMax Search</h1>
 
       
    <div className="text-center mt-5 ">

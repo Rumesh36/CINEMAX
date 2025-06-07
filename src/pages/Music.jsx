@@ -125,7 +125,7 @@ const Music = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gradient-to-r from-red-300 to-blue-500 transition-all duration-1000">
+    <div className="min-h-screen flex justify-center items-center bg-gradient-to-r from-gray-200 to-gray-500 transition-all pt-20  ">
       <div className="bg-gray-100 mx-auto rounded-2xl shadow-2xl p-6 space-y-4 w-[350px] md:w-[800px] md:h-auto ">
         <h2 className="text-center text-lg font-semibold text-gray-700">
           🎵 Now Playing
@@ -138,7 +138,7 @@ const Music = () => {
             className="w-full h-fit object-cover border-amber-50"
           />
         </div>
-        <p className="text-center text-xl font-medium text-gray-800">
+        <p className="text-center text-xl  text-gray-800 font-semibold">
           {Songs[currentIndex].title}
         </p>
 
@@ -173,8 +173,9 @@ const Music = () => {
         </div>
 
         {/* songs list  */}
-        <div className="mt-6">
-          <h3 className="text-xl font-semibold ml-2 my-2">Our Playlist &hearts;</h3>
+         <h3 className="text-xl font-semibold ml-2">Our Playlist &hearts;</h3>
+        <div className="  h-80 overflow-scroll bg-white rounded-2xl px-auto ">
+         
           <ul className="flex flex-col gap-2">
             {Songs.map((song, index) => (
               <li
