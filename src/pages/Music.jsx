@@ -181,12 +181,15 @@ const Music = () => {
               <li
                 key={index}
                 onClick={() => SelectedSongs(index)}
-                className={`p-2 rounded-lg cursor-pointer text-sm font-semibold transition-all ${
+                className={`p-2 rounded-lg cursor-pointer text-md font-semibold transition-all flex items-center gap-3 ${
                   index === currentIndex
                     ? "bg-red-300 text-red-700"
                     : "hover:bg-gray-300 text-gray-600"
                 }`}
               >
+                <img src={song.img} alt={song.title}
+                className="w-12 h-15 rounded-lg object-cover flex-shrink-0" />
+                
                 {song.title}
               </li>
             ))}

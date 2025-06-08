@@ -7,7 +7,7 @@ import Footer from '../components/Layouts/Footer'
 const Home = () => {
   return (
     <>
-    <div className="bg-linear-to-b from-white to-gray-500 dark:bg-gray-900 min-h-screen" >
+    <div className="bg-linear-to-b from-white to-gray-500 dark:bg-gray-900 min-h-screen  " >
              <h1 className='text-center mt-2 text-3xl text-black tracking-[0.5rem] font-bold'>Cine<span className='text-red-600'>Max</span></h1>
              <p className='text-center text-charcoalGray text-xs'>Where the soul meets emotion — that’s the magic of cinema.</p>
 
