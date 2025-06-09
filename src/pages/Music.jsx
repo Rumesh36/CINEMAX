@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { FaPlay } from "react-icons/fa6";
 import { FaPause } from "react-icons/fa";
 import { GiNextButton, GiPreviousButton } from "react-icons/gi";
+import { FaRandom } from "react-icons/fa";
 import Img1 from "../assets/Img/Oohalu_Gusagusalade_poster.webp";
 import Img2 from "../assets/Img/agnyaathavaasi.webp";
 import song1 from "../assets/Songs/songs1.mp3";
@@ -102,7 +103,7 @@ const Music = () => {
   };
 
   const playNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % Songs.length);
+    setCurrentIndex((next) => (next + 1) % Songs.length);
     setIsPlaying(true);
   };
 
@@ -110,6 +111,14 @@ const Music = () => {
     setCurrentIndex((prev) => (prev - 1 + Songs.length) % Songs.length);
     setIsPlaying(true);
   };
+   const randomSong = () =>{
+
+   const random = Math.floor(Math.random()*Songs.length);
+   setCurrentIndex(random);
+    setIsPlaying(true);
+    console.log(random);
+    
+   }
 
   const SelectedSongs = (index) => {
     setCurrentIndex(index);
@@ -128,7 +137,7 @@ const Music = () => {
     <div className="min-h-screen flex justify-center items-center bg-gradient-to-r from-gray-200 to-gray-500 transition-all pt-20  ">
       <div className="bg-gray-100 mx-auto rounded-2xl shadow-2xl p-6 space-y-4 w-[350px] md:w-[800px] md:h-auto ">
         <h2 className="text-center text-lg font-semibold text-gray-700">
-          🎵 Now Playing
+         {isPlaying ? " 🎵 Now Playing" :" The song Paused.. "}
         </h2>
         {/* background image */}
         <div className="w-60 h-60 md:w-130 md:h-130 mx-auto overflow-hidden rounded-2xl shadow">
@@ -141,7 +150,11 @@ const Music = () => {
         <p className="text-center text-xl  text-gray-800 font-semibold">
           {Songs[currentIndex].title}
         </p>
-
+        {/* random songs  */}
+        <div className="flex  justify-end mr-3 ">
+          <button onClick={randomSong}
+          className="text-2xl"><FaRandom/></button>
+        </div>
         {/* seekk bar */}
         <div className="">
           <input
