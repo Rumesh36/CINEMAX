@@ -201,7 +201,7 @@ const Music = () => {
                 }`}
               >
                 <img src={song.img} alt={song.title}
-                className="w-12 h-15 rounded-lg object-cover flex-shrink-0" />
+                className="w-10 h-13 rounded-lg object-cover flex-shrink-0" />
                 
                 {song.title}
               </li>
