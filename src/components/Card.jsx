@@ -4,7 +4,6 @@ import { motion, useInView } from 'framer-motion'
 const Card = (props) => {
   const ref = useRef(null);
   const isInView =useInView(ref,{
-    triggerOnce:true,
     threshould:0.2,
   } 
 );

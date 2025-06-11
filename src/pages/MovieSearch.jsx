@@ -44,18 +44,18 @@ const handleSearch = () => {
   };
   
   return (
-  <>
+  <div className='bg-gray-300 min-h-screen'>
 
-  <h1 className="text-center text-3xl my-3 font-bold text-gray-700 pt-20">CineMax Search</h1>
+  <h1 className="text-center text-3xl my-3 font-bold text-gray-800 pt-20">CineMax Search</h1>
 
       
-   <div className="text-center mt-5 ">
+   <div className="text-center ">
       <label className='text-lg font-semibold text-red-600'>Search by Movie Name</label>
       <br />
       <input
         type="text"
         placeholder="Enter name of the movie"
-        className="border-2 my-5  rounded-lg px-3 py-2 hover:border-blue-600"
+        className="border-3 border-black  my-5  rounded-lg px-3 py-2 hover:border-blue-600"
         onChange={handleChanges} 
         value={movieName}
       />
@@ -67,13 +67,13 @@ const handleSearch = () => {
    </div>
 
       <div className="mt-4 text-center">
-        {searchQuery && <h2 className='text-xl text-gray-700'>You Searched for: {searchQuery}</h2>}
+        {searchQuery && <h2 className='text-xl font-bold  text-gray-700'>You Searched for: {searchQuery}</h2>}
         {loading && <p>Loading...</p>}
 
         {movieData && movieData.Response!=="False" ?
         (
-          <div className='flex flex-col justify-center items-center'>
-               <h1 className='bg-green-600 text-white my-3 py-2 px-3 rounded-2xl'>Data has fetched successfully</h1>
+          <div className='flex flex-col justify-center items-center bg-white rounded-2xl mx-3 mt-5'>
+               <h1 className='bg-green-600 text-white my-3 py-2 px-3 rounded-2xl pb-3 mr-2'>Data has fetched successfully</h1>
 
                <img
                 className=" w-[80%] mr-5 sm:w-[75%] lg:w-[30%] h-auto rounded-3xl"
@@ -94,7 +94,7 @@ const handleSearch = () => {
         }
 
       </div>
-  </>
+  </div>
   )
 }
 
