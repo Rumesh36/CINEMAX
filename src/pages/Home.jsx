@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import banner from '../assets/Img/banner.webp'
 import { Link } from 'react-router-dom'
 import Cards from '../components/Cards'
 import Footer from '../components/Layouts/Footer'
 
 const Home = () => {
+
+   useEffect(()=>{
+     window.scrollTo(0,0)
+   },[])
+
   return (
     <>
     <div className="bg-linear-to-b from-white to-gray-500 dark:bg-gray-900 min-h-screen  " >
