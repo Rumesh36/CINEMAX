@@ -19,7 +19,7 @@ const MovieCard = ({ img, title, director, release, plot }) => {
         {/* Swipeable image area */}
         <div className="mt-8 w-[300px] h-[450px] cursor-grab [perspective:1000px]">
           <motion.div
-            className="relative w-full h-full transition-transform duration-700"
+            className="relative w-full h-full transition-transform duration-75"
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
             onDragEnd={handleSwipe}
