@@ -134,13 +134,13 @@ const Music = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gradient-to-r from-gray-200 to-gray-500 transition-all pt-20  ">
+    <div className="min-h-screen flex justify-center items-center bg-gradient-to-r from-[#fdfbfb] to-[#ebedee] transition-all pt-20  ">
       <div className="bg-gray-100 mx-auto rounded-2xl shadow-2xl p-6 space-y-4 w-[350px] md:w-[800px] md:h-auto ">
         <h2 className="text-center text-lg font-semibold text-gray-700">
-         {isPlaying ? " 🎵 Now Playing" :" The song Paused.. "}
+         {isPlaying ? " 🎵 Now Playing" :" ⏸️ The song Paused.. "}
         </h2>
         {/* background image */}
-        <div className="w-60 h-60 md:w-130 md:h-130 mx-auto overflow-hidden rounded-2xl shadow">
+        <div className="w-60 h-60 md:w-130 md:h-130 mx-auto overflow-hidden rounded-2xl shadow ring-2 ring-gray-600">
           <img
             src={Songs[currentIndex].img}
             alt={Songs[currentIndex].title}
@@ -163,7 +163,7 @@ const Music = () => {
             max={duration}
             value={currentTime}
             onChange={handleSeek}
-            className="w-full h-2 rounded-lg cursor-pointer bg-gradient-to-r from-red-400 via-pink-500 to-purple-600 accent-pink-600"
+            className="w-full h-2 rounded-lg cursor-pointer bg-gradient-to-r from-red-300 via-pink-600 to-purple-600 accent-pink-600"
           />
         </div>
         {/* timer */}

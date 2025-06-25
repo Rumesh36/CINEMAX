@@ -21,11 +21,11 @@ const Navbar = () => {
   return (
   
    <>
-   <nav className='bg-gray-200 fixed top-0 left-0 w-full z-50 shadow-md'>
+   <nav className='bg-gray-100 fixed top-0 left-0 w-full z-50 shadow-md'>
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex justify-between items-center h-16">
-        <div className="text-3xl text-gray-800 font-bold  ">
-          Cine<span className='text-red-600'>Max</span>
+        <div className="text-3xl text-gray-800 font-bold  tracking-[0.3rem] ">
+          Cine<span className='text-red-600 t'>Max</span>
         </div>
            {/* desktop menu */}
            <div className="hidden md:flex space-x-6 text-gray-800 text-xl font-semibold">
@@ -41,7 +41,7 @@ const Navbar = () => {
            </div>
 
            {/* mobile menu toggle */}
-           <div className="md:hidden ">
+           <div className="md:hidden transition-all ">
             <button onClick={toggleMenu}
             className='text-gray-800'>
             {open ? (
