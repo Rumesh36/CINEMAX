@@ -6,11 +6,13 @@ import Error from "./pages/Error";
 import AppLayout from "./components/Layouts/AppLayout";
 import Music from "./pages/Music";
 import Movies from "./pages/Movies";
+import ScrollTop from "./components/ScrollTop";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+    <BrowserRouter>
+       <ScrollTop/> 
         <Routes>
            <Route path="/" element={<Home/>}></Route>
            <Route path="*" element={<Error/>}></Route>
